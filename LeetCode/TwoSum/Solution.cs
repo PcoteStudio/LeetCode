@@ -7,8 +7,8 @@ namespace LeetCode
     {
         public class Solution
         {
-            // Runtime: 252 ms, faster than 63.02% of C# online submissions for Two Sum.
-            // Memory Usage: 32.9 MB, less than 17.31% of C# online submissions for Two Sum.
+            // Runtime: 244 ms, faster than 81.57% of C# online submissions for Two Sum.
+            // Memory Usage: 32.8 MB, less than 22.08% of C# online submissions for Two Sum.
             public int[] TwoSum(int[] nums, int target)
             {
                 Dictionary<int, int> complements = new Dictionary<int, int>();
