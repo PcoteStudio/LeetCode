@@ -7,8 +7,8 @@ namespace LeetCode
         public class ListNode
         {
             public int val;
-            public ListNode next;
-            public ListNode(int val = 0, ListNode next = null)
+            public ListNode? next;
+            public ListNode(int val = 0, ListNode? next = null)
             {
                 this.val = val;
                 this.next = next;
@@ -25,14 +25,14 @@ namespace LeetCode
                 return GetNode(total) ?? new ListNode(0, null);
             }
 
-            public BigInteger GetNumber(ListNode node)
+            public BigInteger GetNumber(ListNode? node)
             {
                 if (node == null)
                     return 0;
                 return GetNumber(node.next) * 10 + node.val;
             }
 
-            public ListNode GetNode(BigInteger value)
+            public ListNode? GetNode(BigInteger value)
             {
                 if (value == 0)
                     return null;

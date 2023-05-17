@@ -12,11 +12,11 @@ namespace Tests
         [Fact]
         public void Test_SameDepth()
         {
-            ListNode l1 = new ListNode(3, null);
+            ListNode? l1 = new ListNode(3, null);
             l1 = new ListNode(4, l1);
             l1 = new ListNode(2, l1);
 
-            ListNode l2 = new ListNode(4, null);
+            ListNode? l2 = new ListNode(4, null);
             l2 = new ListNode(6, l2);
             l2 = new ListNode(5, l2);
 
@@ -27,9 +27,9 @@ namespace Tests
         [Fact]
         public void Test_AddZero()
         {
-            ListNode l1 = new ListNode(0, null);
+            ListNode? l1 = new ListNode(0, null);
 
-            ListNode l2 = new ListNode(0, null);
+            ListNode? l2 = new ListNode(0, null);
 
             ListNode result = solution.AddTwoNumbers(l1, l2);
             Assert.Equal(new BigInteger(0), result.val);
@@ -39,7 +39,7 @@ namespace Tests
         [Fact]
         public void Test_DifferentDepth()
         {
-            ListNode l1 = new ListNode(9, null);
+            ListNode? l1 = new ListNode(9, null);
             l1 = new ListNode(9, l1);
             l1 = new ListNode(9, l1);
             l1 = new ListNode(9, l1);
@@ -47,7 +47,7 @@ namespace Tests
             l1 = new ListNode(9, l1);
             l1 = new ListNode(9, l1);
 
-            ListNode l2 = new ListNode(9, null);
+            ListNode? l2 = new ListNode(9, null);
             l2 = new ListNode(9, l2);
             l2 = new ListNode(9, l2);
             l2 = new ListNode(9, l2);
@@ -59,9 +59,9 @@ namespace Tests
         [Fact]
         public void Test_NumberLargerThanLong()
         {
-            ListNode l1 = new ListNode(9, null);
+            ListNode? l1 = new ListNode(9, null);
 
-            ListNode l2 = new ListNode(9, null);
+            ListNode? l2 = new ListNode(9, null);
             l2 = new ListNode(9, l2);
             l2 = new ListNode(9, l2);
             l2 = new ListNode(9, l2);
@@ -94,7 +94,7 @@ namespace Tests
         [Fact]
         public void Test_GetNumber()
         {
-            ListNode list = new ListNode(4, null);
+            ListNode? list = new ListNode(4, null);
             list = new ListNode(6, list);
             list = new ListNode(5, list);
 
@@ -104,11 +104,11 @@ namespace Tests
         [Fact]
         public void Test_GetNode()
         {
-            ListNode node = solution.GetNode(301);
-            Assert.Equal(1, node.val);
-            Assert.Equal(0, node.next.val);
-            Assert.Equal(3, node.next.next.val);
-            Assert.Null(node.next.next.next);
+            ListNode? node = solution.GetNode(301);
+            Assert.Equal(1, node?.val);
+            Assert.Equal(0, node?.next?.val);
+            Assert.Equal(3, node?.next?.next?.val);
+            Assert.Null(node?.next?.next?.next);
         }
     }
 }
