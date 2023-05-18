@@ -1,12 +1,11 @@
-using System;
-using LeetCode.TwoSum;
+using LeetCode;
 using Xunit;
 
 namespace Tests
 {
-    public class TwoSumTest
+    public class _0001_TwoSumTest
     {
-        Solution solution = new Solution();
+        _0001_TwoSum solution = new _0001_TwoSum();
 
         [Fact]
         public void Test_Example1()

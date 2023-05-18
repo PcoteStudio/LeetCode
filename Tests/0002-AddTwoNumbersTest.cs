@@ -1,13 +1,12 @@
-using System;
+using LeetCode;
 using System.Numerics;
-using LeetCode.AddTwoNumbers;
 using Xunit;
 
 namespace Tests
 {
-    public class AddTwoNumbersTest
+    public class _0002_AddTwoNumbersTest
     {
-        Solution solution = new Solution();
+        _0002_AddTwoNumbers solution = new _0002_AddTwoNumbers();
 
         [Fact]
         public void Test_SameDepth()
