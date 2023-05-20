@@ -1,6 +1,6 @@
-﻿// Link: https://leetcode.com/problems/add-two-numbers/
-// Runtime: 100 ms, faster than 91.01% of C# online submissions for Add Two Numbers.
-// Memory Usage: 28.6 MB, less than 9.14% of C# online submissions for Add Two Numbers.
+﻿// Link: https://leetcode.com/problems/add-two-numbers/submissions/953995801/
+// Runtime: 93 ms, faster than 82.99% of C# online submissions for Add Two Numbers.
+// Memory Usage: 49.6 MB, less than 23.97% of C# online submissions for Add Two Numbers.
 
 using System.Numerics;
 
