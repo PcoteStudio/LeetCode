@@ -24,17 +24,14 @@ namespace LeetCode
                     longestPalindrome = current.ToString();
 
                 // Even
-                if (i + 1 < s.Length && s[i] == s[i + 1])
+                for (int j = 0; j < s.Length - i - 1 && j <= i; j++)
                 {
-                    for (int j = 0; j < s.Length - i - 1 && j <= i; j++)
-                    {
-                        if (s[i - j] == s[i + j + 1])
-                            current = s.Substring(i - j, (i + j) - (i - j) + 2);
-                        else break;
-                    }
-                    if (current.Length > longestPalindrome.Length)
-                        longestPalindrome = current.ToString();
+                    if (s[i - j] == s[i + j + 1])
+                        current = s.Substring(i - j, (i + j) - (i - j) + 2);
+                    else break;
                 }
+                if (current.Length > longestPalindrome.Length)
+                    longestPalindrome = current.ToString();
             }
 
             return longestPalindrome;
