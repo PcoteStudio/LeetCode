@@ -1,6 +1,6 @@
-﻿// Link : https://leetcode.com/problems/two-sum/        
-// Runtime: 244 ms, faster than 81.57% of C# online submissions for Two Sum.
-// Memory Usage: 32.8 MB, less than 22.08% of C# online submissions for Two Sum.
+﻿// Link : https://leetcode.com/problems/two-sum/submissions/954003355/
+// Runtime: 153 ms, faster than 72.61% of C# online submissions for Two Sum.
+// Memory Usage: 44.8 MB, less than 20.74% of C# online submissions for Two Sum.
 
 namespace LeetCode
 {
@@ -8,12 +8,14 @@ namespace LeetCode
     {
         public int[] TwoSum(int[] nums, int target)
         {
-            Dictionary<int, int> complements = new Dictionary<int, int>();
+            Dictionary<int, int> found = new Dictionary<int, int>();
             for (int i = 0; i < nums.Length; i++)
             {
-                if (complements.ContainsKey(nums[i]))
-                    return new int[] { complements[nums[i]], i };
-                complements.Add(target - nums[i], i);
+                if (target - nums[i] != nums[i] && found.ContainsKey(nums[i]))
+                    continue;
+                if (found.ContainsKey(target - nums[i]))
+                    return new int[] { found[target - nums[i]], i };
+                found.Add(nums[i], i);
             }
             throw new ArgumentException("No valid sum exist");
         }
